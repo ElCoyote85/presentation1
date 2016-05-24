@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выставки 2016 года в Москве, Санкт-Петербурге, регионах России и онлайн-выставки &ndash; НаВыставке.ru</title>
+    <link rel="stylesheet" href="../semantic/dist/semantic.css">
+    <link rel="stylesheet" href="css/presentation.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="ui container">
+    <div class="nv-top-block">
+        <img width="100%" src="img/block-top.png" alt="">
+    </div>
+    <div class="ui four column centered grid nv-menu nv-no-margin">
+        <div class="column nv-menu-block nv-active">
+            <a href="index.html">
+                <img src="img/1a.png" style="width: 100%;" alt="" style="position: absolute;">
+                <img src="img/backarrow.png" alt="" style="position: absolute; top: 0;">
+            </a>
+        </div>
+        <div class="column nv-menu-block nv-two">
+            <a href="#"><img src="img/2a.png" style="width: 100%;" alt=""></a>
+        </div>
+        <div class="column nv-menu-block nv-three">
+            <a href="#"><img src="img/3a.png" style="width: 100%;" alt=""></a>
+        </div>
+        <div class="column nv-menu-block nv-four">
+            <a href="#"><img src="img/4a.png" style="width: 100%;" alt=""></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="ui container" style="margin-top: -4px;">
+    <div style="width: 100%; height: 600px; overflow: hidden; position: relative;">
+        <div style="width: 103%; height: 103%; overflow: scroll;">
+            <a href="stand.html" style="display: block;"><img src="img/companies.png" alt=""></a>
+        </div>
+        <div class="search">
+            <a href="#!" onclick="calShow()"><img width="100%" src="img/search.png" alt=""></a>
+        </div>
+    </div>
+
+</div>
+
+<div class="ui container" style="margin-top: -5px;">
+    <img src="img/block-bottom.png" alt="">
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="../semantic/dist/semantic.js"></script>
+<script src="js/calendar.js"></script>
+<script>
+    var calActive = false;
+
+
+//    function calShow() {
+//        var cal = $("#cal")
+//        if(cal.hasClass("cal-hide")){
+//            cal.removeClass("cal-hide").addClass("cal-show");
+//        } else {
+//            cal.removeClass("cal-show").addClass("cal-hide");
+//        }
+//    }
+
+    function calShow() {
+
+        if(!calActive) {
+            $(".search").animate({
+                right: "-23%"
+            }, {
+                duration: 700,
+//                easing: "easeOutBounce",
+                complete: function () {
+                    calActive = true;
+                    console.log(calActive);
+                }
+            });
+        } else {
+            $(".search").animate({
+                right: "0"
+            }, {
+                duration: 300,
+//                easing: "easeIn",
+                complete: function () {
+                    calActive = false;
+                }
+            });
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

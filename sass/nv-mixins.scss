@@ -20,6 +20,7 @@
 
 @mixin pseudo-shadow($side:right, $color: rgba(#00ACED, 0.5)) {
   z-index: 10;
+  $opacity: 0.4;
   @if $side == right {
     position: relative;
     &:after {
@@ -31,7 +32,19 @@
       top: 0;
       //background-color: red;
       background: linear-gradient(to right, #dfdfeb 0%, #c3c1d6 5%, #d5d4e4 10%, rgba(#e8e8f4, 0));
-      opacity: 0.4;
+      opacity: $opacity;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 10%;
+      height: 300px;
+      left: -10%;
+      top: 0;
+      //background-color: red;
+      background: linear-gradient(to left, #dfdfeb 0%, #c3c1d6 5%, #d5d4e4 10%, rgba(#e8e8f4, 0));
+      opacity: $opacity;
+      z-index: 20;
     }
   }
 }
