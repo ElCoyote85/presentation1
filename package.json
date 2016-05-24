@@ -9,12 +9,17 @@
     "semantic-ui": "^2.1.8"
   },
   "devDependencies": {
-    "sass-loader": "^3.2.0",
-    "css-loader": "^0.23.1",
-    "style-loader": "^0.13.1",
     "autoprefixer-loader": "^3.2.0",
-    "node-sass": "^3.7.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
     "gulp": "^3.9.1",
+    "node-sass": "^3.7.0",
+    "raw": "^0.1.4",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },

@@ -1,4 +1,7 @@
 @import "nv-mixins";
+@import "calendar-block";
+@import "calendar";
+@import "search-block";
 
 .nv-top-block {
   height: 180px;
@@ -43,6 +46,16 @@
 
 body {
   background-color: #c7c3c0;
+}
+
+
+/* CENTER SECTION COLUMNS*/
+
+.nv-left-column, .nv-center-column {
+  height: 600px;
+}
+.nv-right-column {
+  height: 1000px;
 }
 
 

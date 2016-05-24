@@ -10,13 +10,19 @@ module.exports = {
         path: "./",
         filename: "./bundle.js"
     },
+    devtool: 'eval',
     module: {
         loaders: [
             {
                 test: /\.scss$/,
                 include: /sass/,
-                loader: ExtractTextPlugin.extract("style", "css!autoprefixer?browsers=last 3 versions!sass")
-            }
+                loader: ExtractTextPlugin.extract("style", "css?sourceMap!autoprefixer?browsers=last 3 versions!sass?sourceMap")
+            },
+            // {
+            //     test: /\.(png)$/,
+            //     include: /public\/img/,
+            //     loader: ["url-loader"]
+            // }
         ]
     },
     plugins: [

@@ -1,3 +1,17 @@
+.nv-calendar {
+  font-family: Tahoma, Geneva, sans-serif;
+  margin-top: 10px; }
+  .nv-calendar .nv-calendar-title {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #7f7f7d; }
+  .nv-calendar .nv-calendar-description {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: #7f7f7d; }
+
 .nv-top-block {
   height: 180px;
   width: 100%; }
@@ -33,6 +47,13 @@
 
 body {
   background-color: #c7c3c0; }
+
+/* CENTER SECTION COLUMNS*/
+.nv-left-column, .nv-center-column {
+  height: 600px; }
+
+.nv-right-column {
+  height: 1000px; }
 
 /* UTILS */
 .nv-no-margin {

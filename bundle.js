@@ -44,13 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
+	eval("__webpack_require__(1);\n\n/*****************\n ** WEBPACK FOOTER\n ** ./entry.js\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./entry.js?");
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./sass/presentation.scss\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./sass/presentation.scss?");
 
 /***/ }
 /******/ ]);
