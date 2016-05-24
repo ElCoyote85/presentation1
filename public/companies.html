@@ -43,7 +43,7 @@
             <a href="stand.html" style="display: block;"><img src="img/companies.png" alt=""></a>
         </div>
         <div class="search">
-            <a href="#!" onclick="calShow()"><img width="100%" src="img/search.png" alt=""></a>
+            <a href="#!" onclick="calShow();" ><img width="100%" src="img/search.png" alt=""></a>
         </div>
     </div>
 
@@ -61,34 +61,24 @@
     var calActive = false;
 
 
-//    function calShow() {
-//        var cal = $("#cal")
-//        if(cal.hasClass("cal-hide")){
-//            cal.removeClass("cal-hide").addClass("cal-show");
-//        } else {
-//            cal.removeClass("cal-show").addClass("cal-hide");
-//        }
-//    }
-
     function calShow() {
 
         if(!calActive) {
-            $(".search").animate({
+            $(".search")[0].animate({
                 right: "-23%"
             }, {
                 duration: 700,
-//                easing: "easeOutBounce",
+                easing: "easeOutBounce",
                 complete: function () {
                     calActive = true;
                     console.log(calActive);
                 }
             });
         } else {
-            $(".search").animate({
+            $(".search")[0].animate({
                 right: "0"
             }, {
                 duration: 300,
-//                easing: "easeIn",
                 complete: function () {
                     calActive = false;
                 }
