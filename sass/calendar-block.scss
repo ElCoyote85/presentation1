@@ -1,15 +1,22 @@
-.nv-calendar {
+.nv-calendar-block {
   font-family: Tahoma, Geneva, sans-serif;
-  margin-top: 10px;
+  //margin-top: 10px;
+  text-align: justify;
+  img {
+    width: 100%;
+  }
+  //min-height: 600px;
   .nv-calendar-title {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 22px;
     text-align: center;
     color: #7f7f7d;
+
   }
   .nv-calendar-description {
+    margin-top: 5px;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     text-align: center;
     color: #7f7f7d;
   }

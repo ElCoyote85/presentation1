@@ -3,10 +3,16 @@
 @import "calendar";
 @import "search-block";
 
+body {
+  //background-color: #c7c3c0;
+  background-color: white;
+}
+
+
 .nv-top-block {
-  height: 180px;
+  //height: 180px;
   width: 100%;
-  //background-color: wheat;
+  background-color: #d4d3d1;
 }
 
 
@@ -19,8 +25,11 @@
     padding: 0 !important;
     margin: 0 !important;
     width: 25%;
-    min-height: 300px;
+    //min-height: 300px;
     //background-color: gray;
+    img {
+      width: 100%;;
+    }
     &.nv-active {
       //background-color: white;
       //@include shadow(right, rgba(#928ce6, 0.15))
@@ -44,9 +53,6 @@
   }
 }
 
-body {
-  background-color: #c7c3c0;
-}
 
 
 /* CENTER SECTION COLUMNS*/
@@ -67,4 +73,29 @@ body {
 
 .nv-no-padding {
   padding: 0 !important;
+}
+
+
+@keyframes cal-show {
+  //0% { display: block;}
+  100% { transform: translateX(0);  }
+}
+@keyframes cal-hide {
+  100% { transform: translateX(-105%);  }
+}
+.cal-show {
+  animation: cal-show 0.5s ease-in forwards;
+}
+.cal-hide {
+  animation: cal-hide 2s ease-in  forwards;
+  //display: none;
+  //transform: translateX(-105%);
+  left: -100%;
+}
+#cal {
+  width: 100%;
+  //position: relative;
+  position: absolute;
+  z-index: 10;
+  left: -100%;
 }

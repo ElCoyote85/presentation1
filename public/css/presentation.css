@@ -1,20 +1,51 @@
-.nv-calendar {
+.nv-calendar-block {
   font-family: Tahoma, Geneva, sans-serif;
-  margin-top: 10px; }
-  .nv-calendar .nv-calendar-title {
+  text-align: justify; }
+  .nv-calendar-block img {
+    width: 100%; }
+  .nv-calendar-block .nv-calendar-title {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 22px;
     text-align: center;
     color: #7f7f7d; }
-  .nv-calendar .nv-calendar-description {
+  .nv-calendar-block .nv-calendar-description {
+    margin-top: 5px;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     text-align: center;
     color: #7f7f7d; }
 
+.nv-calendar {
+  width: 100%;
+  margin: 0;
+  overflow: hidden; }
+  .nv-calendar img {
+    width: 100%; }
+  .nv-calendar .nv-calendar-top {
+    color: white;
+    background-color: #bfbeb9;
+    padding: 25px 15px;
+    font-size: 24px; }
+  .nv-calendar .nv-calendar-container {
+    overflow: scroll;
+    white-space: nowrap;
+    margin: 0 -20px -20px 0; }
+  .nv-calendar .nv-calendar-date {
+    width: 80px;
+    margin: 0 -1px;
+    display: inline-block;
+    min-height: 400px; }
+    .nv-calendar .nv-calendar-date .nv-calendar-date-header {
+      background-color: #f2f1ec;
+      width: 100%;
+      height: 55px; }
+
+body {
+  background-color: white; }
+
 .nv-top-block {
-  height: 180px;
-  width: 100%; }
+  width: 100%;
+  background-color: #d4d3d1; }
 
 .nv-menu {
   overflow: hidden; }
@@ -22,8 +53,9 @@
     color: #00b5ad;
     padding: 0 !important;
     margin: 0 !important;
-    width: 25%;
-    min-height: 300px; }
+    width: 25%; }
+    .nv-menu .nv-menu-block img {
+      width: 100%; }
     .nv-menu .nv-menu-block.nv-active {
       z-index: 10;
       position: relative; }
@@ -45,9 +77,6 @@
         height: 100%;
         background-color: rgba(232, 232, 244, 0.3); }
 
-body {
-  background-color: #c7c3c0; }
-
 /* CENTER SECTION COLUMNS*/
 .nv-left-column, .nv-center-column {
   height: 600px; }
@@ -61,3 +90,38 @@ body {
 
 .nv-no-padding {
   padding: 0 !important; }
+
+@-webkit-keyframes cal-show {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes cal-show {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@-webkit-keyframes cal-hide {
+  100% {
+    -webkit-transform: translateX(-105%);
+            transform: translateX(-105%); } }
+
+@keyframes cal-hide {
+  100% {
+    -webkit-transform: translateX(-105%);
+            transform: translateX(-105%); } }
+
+.cal-show {
+  -webkit-animation: cal-show 0.5s ease-in forwards;
+          animation: cal-show 0.5s ease-in forwards; }
+
+.cal-hide {
+  -webkit-animation: cal-hide 2s ease-in  forwards;
+          animation: cal-hide 2s ease-in  forwards;
+  left: -100%; }
+
+#cal {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  left: -100%; }

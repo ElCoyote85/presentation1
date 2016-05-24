@@ -9,39 +9,127 @@
 <body>
 
 <div class="ui container">
-    <div class="nv-top-block"></div>
+    <div class="nv-top-block">
+        <img width="100%" src="img/block-top.png" alt="">
+    </div>
     <div class="ui four column centered grid nv-menu nv-no-margin">
-        <div class="column nv-menu-block nv-active">
-            <a href="#"><img src="images/1.png" style="width: 100%;" alt=""></a>
+        <div class="column nv-menu-block nv-actiave">
+            <a href="#"><img src="img/1a.png" style="width: 100%;" alt=""></a>
         </div>
         <div class="column nv-menu-block nv-two">
-            <a href="#"><img src="images/2a.png" style="width: 100%;" alt=""></a>
+            <a href="#"><img src="img/2a.png" style="width: 100%;" alt=""></a>
         </div>
         <div class="column nv-menu-block nv-three">
-            <a href="#"><img src="images/3a.png" style="width: 100%;" alt=""></a>
+            <a href="#"><img src="img/3a.png" style="width: 100%;" alt=""></a>
         </div>
         <div class="column nv-menu-block nv-four">
-            <a href="#"><img src="images/4a.png" style="width: 100%;" alt=""></a>
+            <a href="#"><img src="img/4a.png" style="width: 100%;" alt=""></a>
+        </div>
+    </div>
+</div>
+
+<div class="ui container" style="margin-top: -4px;">
+    <div class="ui three column grid nv-no-margin nv-no-padding">
+        <div class="four wide column nv-left-column nv-no-padding" style='background-image: url("img/block-left.png")'>
+            <div class="ui center row nv-no-margin">
+                <!--<div class="nv-calendar" style='background-image: url("img/calendar-block.png")'>-->
+                <div class="nv-calendar-block">
+                    <a href="#!" onclick="calShow();">
+                        <img  src="img/calendar-block.png" alt="">
+                    </a>
+                    <!--<div class=" nv-calendar-title">КАЛЕНДАРЬ</div>-->
+                    <!--<div class=" nv-calendar-description">выставок 2016</div>-->
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="eight wide column nv-center-column nv-no-padding" style='background-image: url("img/block-center.png"); overflow: hidden;'>
+            <img style="width: 100%; z-index: 1; position: absolute" src="img/block-index.png" alt="">
+            <img style="z-index: 10;" class="cal-ahide" id="cal" src="img/calendar.png" alt="">
+        </div>
+
+
+        <div class="four wide column nv-right-column nv-no-padding" style='background-image: url("img/block-right.png"); overflow: hidden; height: 600px;'>
+            <a  href="#"><img style="width: 100%;" src="img/search-block.png" alt=""></a>
         </div>
     </div>
 </div>
 
 <div class="ui container">
-    <div class="ui three column grid nv-no-margin">
-        <div class="four wide column nv-left-column" style='background-image: url("img/block-left.png")'>
-            <div class="ui center row">
-                <div class="nv-calendar">
-                    <div class=" nv-calendar-title">КАЛЕНДАРЬ</div>
-                    <div class=" nv-calendar-description">выставок 2016</div>
-                </div>
-            </div>
-        </div>
-        <div class="eight wide column nv-center-column" style='background-image: url("img/block-center.png")'></div>
-        <div class="four wide column nv-right-column" style='background-image: url("img/block-right.png")'></div>
-    </div>
-
+    <img src="img/block-bottom.png" alt="">
 </div>
 
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
 <script src="../semantic/dist/semantic.js"></script>
+<script src="js/calendar.js"></script>
+<script>
+    var calActive = false;
+
+
+//    function calShow() {
+//        var cal = $("#cal")
+//        if(cal.hasClass("cal-hide")){
+//            cal.removeClass("cal-hide").addClass("cal-show");
+//        } else {
+//            cal.removeClass("cal-show").addClass("cal-hide");
+//        }
+//    }
+
+    function calShow() {
+
+        if(!calActive) {
+            $("#cal").animate({
+                left: 0
+            }, {
+                duration: 700,
+                easing: "easeOutBounce",
+                complete: function () {
+                    calActive = true;
+                    console.log(calActive);
+                }
+            });
+        } else {
+            $("#cal").animate({
+                left: "-100%"
+            }, {
+                duration: 300,
+                complete: function () {
+                    calActive = false;
+                }
+            });
+        }
+
+    }
+
+
+
+//    var calShow = function () {
+//        if(!calActive) {
+//            calActive = true;
+//            $("#cal").show();
+//
+//            $("#cal").addClass("cal-show");
+////            $("#cal").removeClass('cal-hide');
+////            $("#cal").toggleClass("cal-show");
+//
+////            $("#cal").addClass("cal-show");
+////            $("#cal").animate({
+////                transform: transitionX(0)
+////            }, function () {
+////
+////            });
+//        } else {
+//            calActive = false;
+////            $("#cal").toggleClass("cal-show");
+////            $(".calShow").css({'-webkit-animation-direction':'alternate;'})
+////            $("#cal").toggleClass("cal-show");
+//            $("#cal").removeClass('cal-show');
+////            $("#cal").addClass("cal-hide");
+//        }
+//    }
+</script>
 </body>
 </html>
