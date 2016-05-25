@@ -5,14 +5,32 @@
     <title>Выставки 2016 года в Москве, Санкт-Петербурге, регионах России и онлайн-выставки &ndash; НаВыставке.ru</title>
     <link rel="stylesheet" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="css/presentation.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/assets/owl.theme.default.min.css">
 </head>
 <body>
 
-<div class="ui container">
-    <div class="nv-top-block">
-        <img width="100%" src="img/block-top.png" alt="">
+
+<div class="" style="background-color: #E1E2DB; width: 100%; margin: 0; padding: 0; position: fixed; top: 0; left: 0; z-index: 200;">
+    <a href="index.html" style="display: block;"><img style="height: 50px;" src="img/top-logo.png" alt=""></a>
+</div>
+
+
+
+<div class="ui container" style="margin-top: 50px; position: relative;">
+    <div class="nv-top-block" style="overflow: hidden">
+        <div style="width: 25%;  float: left; ">  <img src="img/top-left.png" style="width: 100%;" alt=""> </div>
+        <div class="owl-carousel" style="width: 50%; float: left;">
+            <img width="100%" src="img/navyst-center.png" alt="">
+            <img width="100%" src="img/onexpo-center.png" alt="">
+        </div>
+        <div style="width: 25%; float: left"><img src="img/top-right.png" style="width: 100%;" alt=""> </div>
     </div>
-    <div class="ui four column centered grid nv-menu nv-no-margin">
+
+
+    <div class="ui four column centered grid nv-menu nv-no-margin" style="margin-top: -5px !important;">
         <div class="column nv-menu-block nv-actiave">
             <a href="companies.html"><img src="img/1a.png" style="width: 100%;" alt=""></a>
         </div>
@@ -37,8 +55,7 @@
                     <a href="#!" onclick="calShow();">
                         <img  src="img/calendar-block.png" alt="">
                     </a>
-                    <!--<div class=" nv-calendar-title">КАЛЕНДАРЬ</div>-->
-                    <!--<div class=" nv-calendar-description">выставок 2016</div>-->
+
                 </div>
             </div>
         </div>
@@ -51,32 +68,46 @@
         </div>
 
 
-        <div class="four wide column nv-right-column nv-no-padding" style='background-image: url("img/block-right.png"); overflow: hidden; height: 600px;'>
+        <div class="four wide column nv-right-column nv-no-padding" style='background-image: url("img/block-right.png");  height: 600px;'>
             <a  href="#"><img style="width: 100%;" src="img/search-block.png" alt=""></a>
         </div>
     </div>
 </div>
 
 <div class="ui container">
-    <img src="img/block-bottom.png" alt="">
+    <div class="" style="width: 75%; height: 400px; overflow: hidden;">
+        <div style="overflow: scroll; width: 103%; height: 105%;"><img src="img/info-index.png" alt=""></div>
+    </div>
+</div>
+
+<div class="ui container">
+    <img style="width: 100%;" src="img/block-bottom.png" alt="">
 </div>
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="../semantic/dist/semantic.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
 <script>
     var calActive = false;
+    var owl;
 
+    $(function () {
+        var owl = $(".owl-carousel").owlCarousel({
 
-//    function calShow() {
-//        var cal = $("#cal")
-//        if(cal.hasClass("cal-hide")){
-//            cal.removeClass("cal-hide").addClass("cal-show");
-//        } else {
-//            cal.removeClass("cal-show").addClass("cal-hide");
-//        }
-//    }
+            items: 1,
+            loop:true,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            autoplaySpeed: 1000,
+            fluidSpeed: 550
+
+        });
+    });
+
 
     function calShow() {
 
@@ -105,31 +136,6 @@
     }
 
 
-
-//    var calShow = function () {
-//        if(!calActive) {
-//            calActive = true;
-//            $("#cal").show();
-//
-//            $("#cal").addClass("cal-show");
-////            $("#cal").removeClass('cal-hide');
-////            $("#cal").toggleClass("cal-show");
-//
-////            $("#cal").addClass("cal-show");
-////            $("#cal").animate({
-////                transform: transitionX(0)
-////            }, function () {
-////
-////            });
-//        } else {
-//            calActive = false;
-////            $("#cal").toggleClass("cal-show");
-////            $(".calShow").css({'-webkit-animation-direction':'alternate;'})
-////            $("#cal").toggleClass("cal-show");
-//            $("#cal").removeClass('cal-show');
-////            $("#cal").addClass("cal-hide");
-//        }
-//    }
 </script>
 </body>
 </html>

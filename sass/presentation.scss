@@ -117,18 +117,25 @@ body {
 /* SEARCH*/
 
 @keyframes search-load {
-  0%{ right: -22%;}
-  40%{ right: -22%;}
-  100%{ right: 0;}
+  0%{ left: 97%;}
+  40%{ left: 97%;}
+  100%{ left: 75%;}
 }
 
-.search {
+#search {
+  position: absolute;
+  top: 0;
+  //right: 0;
+  left: 97%;
+  width: 25%;
+  height: 100%;
+  //animation: search-load 1s ease-in forwards;
+  /*background-color: #00ACED;*/
+  /*opacity: 0.99;*/
+}
+#contacts {
+  width: 25%;
   position: absolute;
   top: 0;
   right: 0;
-  width: 25%;
-  height: 100%;
-  animation: search-load 1s ease-in forwards;
-  /*background-color: #00ACED;*/
-  /*opacity: 0.99;*/
 }

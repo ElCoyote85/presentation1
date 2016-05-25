@@ -150,26 +150,30 @@ body {
 /* SEARCH*/
 @-webkit-keyframes search-load {
   0% {
-    right: -22%; }
+    left: 97%; }
   40% {
-    right: -22%; }
+    left: 97%; }
   100% {
-    right: 0; } }
+    left: 75%; } }
 @keyframes search-load {
   0% {
-    right: -22%; }
+    left: 97%; }
   40% {
-    right: -22%; }
+    left: 97%; }
   100% {
-    right: 0; } }
+    left: 75%; } }
 
-.search {
+#search {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 97%;
   width: 25%;
   height: 100%;
-  -webkit-animation: search-load 1s ease-in forwards;
-          animation: search-load 1s ease-in forwards;
   /*background-color: #00ACED;*/
   /*opacity: 0.99;*/ }
+
+#contacts {
+  width: 25%;
+  position: absolute;
+  top: 0;
+  right: 0; }

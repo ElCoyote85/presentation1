@@ -5,23 +5,23 @@
     <title>Выставки 2016 года в Москве, Санкт-Петербурге, регионах России и онлайн-выставки &ndash; НаВыставке.ru</title>
     <link rel="stylesheet" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="css/presentation.css">
-
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/assets/owl.theme.default.min.css">
-
     <style>
 
     </style>
 </head>
 <body>
 
-
 <div class="" style="background-color: #E1E2DB; width: 100%; margin: 0; padding: 0; position: fixed; top: 0; left: 0; z-index: 200;">
     <a href="index.html" style="display: block;"><img style="height: 50px;" src="img/top-logo.png" alt=""></a>
 </div>
 
+
 <div class="ui container" style="margin-top: 50px; position: relative;">
+
+
     <div class="nv-top-block" style="overflow: hidden">
         <div style="width: 25%;  float: left; ">  <img src="img/top-left.png" style="width: 100%;" alt=""> </div>
         <div class="owl-carousel" style="width: 50%; float: left;">
@@ -30,6 +30,7 @@
         </div>
         <div style="width: 25%; float: left"><img src="img/top-right.png" style="width: 100%;" alt=""> </div>
     </div>
+
 
 
     <div class="ui four column centered grid nv-menu nv-no-margin" style="margin-top: -5px !important;">
@@ -54,20 +55,27 @@
 
 
 
-<div class="ui container" style="margin-top: -4px;">
-    <div style="width: 100%; height: 600px; overflow: hidden; position: relative;">
-        <div style="width: 103%; height: 103%; overflow: scroll;">
-            <a href="stand.html" style="display: block;"><img src="img/companies.png" alt=""></a>
+<div class="ui container" style="margin-top: -7px; position: relative; z-index: 100;">
+
+    <div style="position: relative">
+        <div style="width: 75%;"  >
+            <a href="stand.html" style="display: block;  margin-top: -5px;"><img style="width: 100%;" src="img/stand.png" alt=""></a>
         </div>
-        <div id="search">
-            <a href="#!"  ><img width="100%" src="img/search.png" alt=""></a>
+        <div id="contacts">
+            <a href="#!"  ><img width="100%" src="img/contacts.png" alt=""></a>
         </div>
     </div>
 
 </div>
 
 <div class="ui container" style="margin-top: -5px;">
-    <img src="img/block-bottom.png" alt="">
+    <div class="" style="width: 75%; overflow: hidden">
+            <img style="width: 101%;" src="img/company-info.png" alt="">
+    </div>
+</div>
+
+<div class="ui container" style="margin-top: -8px;">
+    <img style="width: 100%;" src="img/block-bottom.png" alt="">
 </div>
 
 <script src="js/jquery.js"></script>
@@ -96,47 +104,47 @@
         });
     });
 
-    $(function () {
 
-        setTimeout(function () {
-            $("#search").animate({
-                left: "75%"
-            }, {
-                duration: 500,
-                easing: "easeInBack",
-                complete: function () {
-                    calActive = true;
-                }
-            })
-        }, 700);
 
-        $("#search").on("click", function (e) {
-            e.preventDefault();
-            if(calActive) {
-                $("#search").animate({
-                    left: "97%"
-                }, {
-                    duration: 700,
-                    easing: "easeOutBounce",
-                    complete: function () {
-                        calActive = false;
-                        console.log(calActive);
-                    }
-                });
-            } else {
-                $("#search").animate({
-                    left: "75%"
-                }, {
-                    duration: 300,
-                    easing: "easeInBack",
-                    complete: function () {
-                        calActive = true;
-                    }
-                });
-            }
-        })
-
-    });
+//    $(function () {
+//
+//        setTimeout(function () {
+//            $("#search").animate({
+//                left: "75%"
+//            }, {
+//                duration: 500,
+//                complete: function () {
+//                    calActive = true;
+//                }
+//            })
+//        }, 500);
+//
+//        $("#search").on("click", function (e) {
+//            e.preventDefault();
+//            if(calActive) {
+//                $("#search").animate({
+//                    left: "97%"
+//                }, {
+//                    duration: 700,
+//                    easing: "easeOutBounce",
+//                    complete: function () {
+//                        calActive = false;
+//                        console.log(calActive);
+//                    }
+//                });
+//            } else {
+//                $("#search").animate({
+//                    left: "75%"
+//                }, {
+//                    duration: 300,
+//                    complete: function () {
+//                        calActive = true;
+//                    }
+//                });
+//            }
+//        })
+//
+//    });
 
 
 
